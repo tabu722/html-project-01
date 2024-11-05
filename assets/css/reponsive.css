@@ -1,0 +1,306 @@
+/* PC */
+@media screen and (min-width: 992px) {
+	.menu-drawer {
+		display: none;
+	}
+
+	.show-on-mobile {
+		display: none;
+	}
+}
+
+/* Tablet/mobile */
+@media screen and (max-width: 991.98px) {
+	.navbar {
+		position: relative;
+	}
+
+	.header .navbar ul {
+		display: none;
+	}
+
+	.navbar .logo {
+		margin-top: 8px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.menu-tablet {
+		width: 24px;
+		color: #333;
+	}
+
+	.overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.25s ease;
+	}
+
+	.menu-drawer {
+		padding: 40px;
+		position: fixed;
+		inset: 0 40% 0 0;
+		background: #fff;
+		z-index: 2;
+		transform: translateX(-100%);
+		transition: 0.5s;
+	}
+
+	.menu-drawer ul {
+		margin-top: 30px;
+	}
+
+	.menu-drawer a {
+		display: block;
+		padding: 15px 0;
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: #333;
+	}
+
+	.menu-checkbox:checked ~ .overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.menu-checkbox:checked ~ .menu-drawer {
+		transform: translateX(0);
+	}
+
+	.hero {
+		height: 100%;
+		padding-bottom: 50px;
+		z-index: 1;
+	}
+
+	.hero-info {
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.hero-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero-img {
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		opacity: 0.6;
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	.hero-info .title {
+		width: 560px;
+	}
+
+	.hero-info .desc {
+		font-size: 1.6rem;
+	}
+
+	.client .list-logo {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.list-feature {
+		grid-template-columns: 1fr 1fr;
+		gap: 25px;
+	}
+
+	.stat {
+		margin: 0;
+		padding: 0;
+	}
+
+	.stat .row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.stat .image {
+		margin-top: 80px;
+		order: 2;
+		margin-left: auto;
+		width: 100%;
+	}
+
+	.stat-trend {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.stat .info {
+		padding: 0;
+		width: 70%;
+		margin: 80px auto 0;
+		order: 1;
+	}
+
+	.stat .info .sub-title {
+		width: 440px;
+	}
+
+	.stat .info .desc {
+		width: 560px;
+	}
+
+	.stat .row-number {
+		margin: 110px 0 0 0;
+	}
+
+	.subscription .body {
+		z-index: 1;
+	}
+
+	.subscription .image {
+		width: 100%;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		opacity: 0.6;
+		overflow: hidden;
+		z-index: -1;
+	}
+
+	.footer .row-top {
+		gap: 50px;
+	}
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+	.show-on-mobile {
+		display: none;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+	h1,
+	h2,
+	h3 {
+		font-size: 3.6rem;
+	}
+	body {
+		font-size: 1.2rem;
+	}
+	.action {
+		display: none;
+	}
+
+	.separate {
+		border-top: 1.5px solid #ccc;
+	}
+
+	.hero-info .title {
+		width: 100%;
+		font-size: 3.6rem;
+	}
+
+	.hero-info .desc {
+		font-size: 1.2rem;
+	}
+
+	.client .row-desc {
+		flex-wrap: wrap;
+		row-gap: 10px;
+	}
+
+	.client .list-logo {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.list-logo .image {
+		width: 100px;
+		height: 100px;
+	}
+
+	.guides {
+		margin: 0;
+	}
+
+	.guides .sub-title {
+		font-size: 2.6rem;
+	}
+
+	.guides .desc {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+
+	.list-guides {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+	}
+
+	.feature-items {
+		width: 100%;
+	}
+
+	.list-feature .body .desc {
+		text-align: unset;
+	}
+
+	.feature .sub-title {
+		font-size: 2.6rem;
+	}
+
+	.feature .link {
+		margin-left: 20px;
+		font-size: 1.2rem;
+	}
+
+	.list-feature {
+		grid-template-columns: 1fr;
+	}
+
+	.stat .stat-img {
+		width: 300px;
+		height: 360px;
+	}
+
+	.stat .info .sub-title {
+		width: 100%;
+		font-size: 2.6rem;
+	}
+
+	.stat .info .desc {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+
+	.stat .row-number {
+		width: 100%;
+		gap: 30px;
+	}
+
+	.stat .row-number .quantity {
+		font-size: 3.2rem;
+	}
+
+	.stat .row-number .desc {
+		font-size: 1rem;
+	}
+	.footer .row-bottom .desc {
+		width: 50%;
+		margin-left: auto;
+	}
+
+	.hero-img {
+		width: 100%;
+	}
+}
